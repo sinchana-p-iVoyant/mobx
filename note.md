@@ -14,3 +14,8 @@
 7. Getters
 8. Initial state
 9. A Team Info Component
+
+# Terminal
+- yarn add mobx mobx-react
+- yarn add -D eslint @typescript-eslint/parser eslint-plugin-mobx
+
