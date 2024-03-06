@@ -57,7 +57,7 @@ const MoneyForm = () => {
             formState.name = e.target.value
         })} />
         <input 
-            type='number' 
+            type='text' 
             placeholder='Player age...' 
             style={{ height: '40px' }} 
             value={formState.age}
@@ -65,7 +65,7 @@ const MoneyForm = () => {
                 formState.age = Number(e.target.value)
             })} />
         <input 
-            type='number' 
+            type='text' 
             placeholder='Yearly salary...' 
             style={{ height: '40px' }} 
             value={formState.salary}
@@ -75,12 +75,12 @@ const MoneyForm = () => {
 
         <button 
             type='button' 
-            onClick={action((e) => {
+            onClick={(e) => {
                 addPlayer(
                     new Athlete(formState.name, formState.age, formState.salary)
                 )
                 formState = initialState
-            })}>
+            }}>
             Add Player
         </button>
     </div>

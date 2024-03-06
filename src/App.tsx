@@ -23,7 +23,7 @@ function App() {
           <TeamInfo />
           <Roster />
           <MoneyForm />
-          </TeamStoreProvider>
+        </TeamStoreProvider>
       </header>
     </div>
   );
