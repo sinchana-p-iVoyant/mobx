@@ -2,11 +2,13 @@ import { observer } from 'mobx-react'
 import React from 'react'
 import Athlete from './Athlete'
 import TradeForm from './TradeForm';
+import { useTeamStore } from './TeamStore';
 
-const lebronJames = new Athlete('Lebron James', 37);
-const stephCurry = new Athlete('Steph Curry', 34);
+// const lebronJames = new Athlete('Lebron James', 37, 9);
+// const stephCurry = new Athlete('Steph Curry', 34, 5);
 
 const Roster = () => {
+    const { players } = useTeamStore() 
   return (
     <div>
         <table>
@@ -16,9 +18,10 @@ const Roster = () => {
                 <th>Teams</th>
                 <th>Trade Form</th>
                 <th>It is their Birthday</th>
+                <th>Salary</th>
             </tr>
             {
-                [lebronJames, stephCurry].map((athlete) => {
+                players.map((athlete) => {
                     return (
                         <tr key={athlete.name}>
 
@@ -31,6 +34,7 @@ const Roster = () => {
                                     🎈Wish Happy Birthday 🥳🎉
                                 </button>
                             </td>
+                            <td>{athlete.salary}</td>
                         </tr>
                     )
                 })
