@@ -40,7 +40,8 @@ export default class TeamStore {
         )
     }
 
-    addPlayer(player: Athlete) {
+    //Made it a Function
+    addPlayer=(player: Athlete) =>{
         this.players.push(player)
     }
 }
