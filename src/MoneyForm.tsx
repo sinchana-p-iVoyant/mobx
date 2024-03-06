@@ -75,12 +75,12 @@ const MoneyForm = () => {
 
         <button 
             type='button' 
-            onClick={(e) => {
+            onClick={action((e) => {
                 addPlayer(
                     new Athlete(formState.name, formState.age, formState.salary)
                 )
                 formState = initialState
-            }}>
+            })}>
             Add Player
         </button>
     </div>
